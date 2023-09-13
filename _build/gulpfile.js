@@ -4,7 +4,7 @@ const gutil = require('gulp-util');
 const plumber = require('gulp-plumber');
 
 let srcDir = '../_src/';
-let deployDir = '../deploy/';
+let deployDir = '../docs/';
 
 let config = {
     mapDir: '../_maps/',

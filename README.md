@@ -1,4 +1,4 @@
-# flarune_shindan
+# demo_diagnosis
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ $ npm install
 ├── _src                         // 編集ファイル格納ディレクトリ
 │   ├── js
 │   └── scss
-└── deploy               // 書き出しディレクトリ
+└── docs               // 書き出しディレクトリ
 ```
 
 ### 2. Generate Static HTML file
