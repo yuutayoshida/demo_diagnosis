@@ -1,0 +1,401 @@
+@use '../Global/global' as *;
+
+$pageName: 'shindan_content';
+
+.#{$projectName} {
+    &##{$pageName} {
+        picture{
+            pointer-events: none;
+        }
+        background-color: $BaseBackgroundColor;
+        header{
+            position: relative;
+            z-index: 2;
+        }
+        #diagnose{
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            @include pc{
+                margin-top: -72px;
+                padding-top: 72px;
+            }
+            @include sp{
+                margin-top: convertToVw(-80);
+                padding-top: convertToVw(80);
+            }
+            .bg_obj{
+                pointer-events: none;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 50%;
+                @include pc{
+                    width: 1275px;
+                    height: 731px;
+                    margin-left: -701px;
+                }
+                @include sp{
+                    width: convertToVw(978);
+                    height: convertToVw(973);
+                    margin-left: convertToVw(-475);
+                }
+            }
+        }
+        #diagnose_area{
+            &.load{
+                pointer-events: none;
+            }
+            @include pc{
+                padding-top: 78px;
+            }
+            @include sp{
+                padding-top: convertToVw(78);
+            }
+        }
+        .question_numbering{
+            margin: 0 auto;
+            @include pc{
+                width: 58px;
+                height: 45px;
+            }
+            @include sp{
+                width: convertToVw(74);
+                height: convertToVw(54);
+            }
+        }
+        .question_text{
+            @include pc{
+                width: 583px;
+                height: 90px;
+                margin: 54px auto 0;
+            }
+            @include sp{
+                width: convertToVw(670);
+                height: convertToVw(190);
+                margin: convertToVw(60) auto 0;
+            }
+        }
+        .choices_wrap{
+            display: flex;
+            @include pc{
+                justify-content: center;
+                margin-top: 26px;
+            }
+            @include sp{
+                flex-direction: column;
+                align-items: center;
+                margin-top: convertToVw(6);
+            }
+        }
+        .btn-choice{
+            overflow: hidden;
+            @include pc{
+                width: 224px;
+                height: 88px;
+                border-radius: 24px;
+                box-shadow: 0px 0px 16px 0px rgba(113, 85, 85, 0.1);
+                &:hover{
+                    picture{
+                       transform: translateY(-88px);
+                    }
+                }
+            }
+            @include sp{
+                width: convertToVw(590);
+                height: convertToVw(128);
+                border-radius: convertToVw(64);
+                box-shadow: 0 0 convertToVw(16) 0 rgba(113, 85, 85, 0.1);
+            }
+            &:nth-of-type(n + 1){
+                @include pc{
+                    margin-left: 16px;
+                }
+                @include sp{
+                    margin-top: convertToVw(24);
+                }
+            }
+            picture{
+                @include pc{
+                    width: 224px;
+                    height: 176px;
+                }
+                @include sp{
+                    width: convertToVw(590);
+                    height: convertToVw(256);
+                }
+            }
+        }
+
+        .pageOverlay{
+            width: 100vw;
+            height: 100vh;
+            @include pc{
+                margin-top: -72px;
+                padding-top: 72px;
+            }
+            @include sp{
+                margin-top: convertToVw(-80);
+                padding-top: convertToVw(80);
+            }
+        }
+
+        .intermediate_wrap{
+            position: relative;
+            overflow: hidden;
+            background: $contentBackgroundColor;
+            @include pc{
+                height: 522px;
+                padding-top: 43px;
+            }
+            @include sp{
+                height: convertToVw(727);
+                padding-top: convertToVw(67);
+            }
+            .bg_obj{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                @include pc{
+                    width: 1394px;
+                    height: 674px;
+                    margin-left: -712px;
+                }
+                @include sp{
+                    width: convertToVw(1036);
+                    height: convertToVw(828);
+                    margin-left: convertToVw(-532);
+                }
+            }
+        }
+
+        .pageOverlay_bottomArea{
+            position: relative;
+            background: $BaseBackgroundColor;
+            @include pc{
+                padding-top: 56px;
+            }
+            @include sp{
+                padding-top: convertToVw(64);
+            }
+            &:before{
+                @include pseudoElement;
+                width: 100%;
+                left: 0;
+                background: url('/images/common/wave_gray.png') repeat-x;
+                @include pc{
+                    top: -15px;
+                    height: 15px;
+                    background-size: 80px 15px;
+                }
+                @include sp{
+                    top: convertToVw(-15);
+                    height: convertToVw(15);
+                    background-size: convertToVw(80) convertToVw(15);
+                }
+            }
+        }
+
+        .btn-next{
+            display: block;
+            margin: 0 auto;
+            overflow: hidden;
+            @include pc{
+                width: 200px;
+                height: 64px;
+                border-radius: 32px;
+                box-shadow: 0px 0px 16px 0px rgba(113, 85, 85, 0.1);
+            }
+            @include sp{
+                width: convertToVw(320);
+                height: convertToVw(128);
+                border-radius: convertToVw(64);
+                box-shadow: 0 0 convertToVw(16) 0 rgba(113, 85, 85, 0.1);
+            }
+            .btn_inner{
+                width: 100%;
+                transform: translateY(0);
+                @include pc{
+                    height: 128px;
+                }
+                @include sp{
+                    height: convertToVw(256);
+                }
+            }
+            &:hover{
+                @include pc{
+                    .btn_inner{
+                        transform: translateY(-64px);
+                    }
+                }
+            }
+        }
+
+        #intermediate-bottle{
+            .intermediate_lead{
+                margin: 0 auto;
+                @include pc{
+                    width: 392px;
+                    height: 114px;
+                }
+                @include sp{
+                    width: convertToVw(570);
+                    height: convertToVw(146);
+                }
+            }
+            .intermediate_imageWrap{
+                @include pc{
+                    width: 160px;
+                    height: 256px;
+                    margin: 28px auto 0;
+                }
+                @include sp{
+                    width: convertToVw(230);
+                    height: convertToVw(365);
+                    margin: convertToVw(68) auto 0;
+                }
+            }
+        }
+
+        #intermediate-mainFlower{
+            .intermediate_lead{
+                margin: 0 auto;
+                @include pc{
+                    width: 359px;
+                    height: 114px;
+                }
+                @include sp{
+                    width: convertToVw(494);
+                    height: convertToVw(146);
+                }
+            }
+            .intermediate_imageWrap{
+                @include pc{
+                    width: 170px;
+                    height: 240px;
+                    margin: 34px auto 0;
+                }
+                @include sp{
+                    width: convertToVw(240);
+                    height: convertToVw(340);
+                    margin: convertToVw(75) auto 0;
+                }
+            }
+        }
+
+        .loading_wrap{
+            position: relative;
+            overflow: hidden;
+            background: $contentBackgroundColor;
+            @include pc{
+                height: 483px;
+                padding-top: 53px;
+            }
+            @include sp{
+                height: convertToVw(727);
+                padding-top: convertToVw(109);
+            }
+            .bg_obj{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                @include pc{
+                    width: 1394px;
+                    height: 674px;
+                    margin-left: -712px;
+                }
+                @include sp{
+                    width: convertToVw(1036);
+                    height: convertToVw(828);
+                    margin-left: convertToVw(-532);
+                }
+            }
+        }
+
+        .loading_msg{
+            margin: 0 auto;
+            @include pc{
+                width: 109px;
+                height: 48px;
+            }
+            @include sp{
+                width: convertToVw(153);
+                height: convertToVw(64);
+            }
+        }
+
+        .loading_animateElm{
+            position: relative;
+            margin: 0 auto;
+            @include pc{
+                width: 240px;
+                height: 240px;
+            }
+            @include sp{
+                width: convertToVw(340);
+                height: convertToVw(340);
+            }
+        }
+
+        .loadingBottle_wrap{
+            overflow: hidden;
+            position: relative;
+            @include pc{
+                width: 240px;
+                height: 240px;
+                margin: 105px auto 0;
+            }
+            @include sp{
+                width: convertToVw(340);
+                height: convertToVw(340);
+                margin: convertToVw(140) auto 0;
+            }
+        }
+
+        .loadingBar-wave{
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include pc{
+                width: 279px;
+                height: 248px;
+            }
+            @include sp{
+                width: convertToVw(422);
+                height: convertToVw(374);
+            }
+        }
+
+        .loadingBar-frame{
+            position: relative;
+            @include pc{
+                width: 240px;
+                height: 240px;
+            }
+            @include sp{
+                width: convertToVw(340);
+                height: convertToVw(340);
+            }
+        }
+
+        .loading_dot{
+            position: absolute;
+            left: 50%;
+            border-radius: 50%;
+            background: #fff;
+            @include pc{
+                top: -57px;
+                width: 10px;
+                height: 10px;
+                margin-left: -5px;
+            }
+            @include sp{
+                top: convertToVw(-60);
+                width: convertToVw(12);
+                height: convertToVw(12);
+                margin-left: convertToVw(-6);
+            }
+        }
+    }
+}

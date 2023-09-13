@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/**
+ * Foundation
+ */
+@use "./Foundation/reset";
+@use "./Foundation/base";
+@use "./Foundation/keyframes";
+@use "./Foundation/animation";
+
+/**
+ * Layout
+ */
+@use "./Layout/header";
+@use "./Layout/footer";
+
+/**
+ * Component
+ */
+
+/**
+ * Pages
+ */
+
+@use "./Page/top";
+@use "./Page/result";
+@use "./Page/content";
+@use "./Page/saveImage";
+

@@ -1,0 +1,56 @@
+@use '../Global/global' as *;
+
+$pageName: 'shindan_saveImage';
+
+.#{$projectName} {
+    &##{$pageName} {
+        background-color: $BaseBackgroundColor;
+        .saveImage{
+            @include pc{
+                padding-bottom: 88px;
+            }
+            @include sp{
+                padding-bottom: convertToVw(67);
+            }
+        }
+        .saveImage_msg{
+            @include pc{
+                width: 404px;
+                height: 23px;
+                margin: 96px auto 0;
+            }
+            @include sp{
+                width: convertToVw(535);
+                height: convertToVw(30);
+                margin: convertToVw(98) auto 0;
+            }
+        }
+        .saveImage_inner{
+            @include pc{
+                display: flex;
+                justify-content: space-between;
+                width: 828px;
+                margin: 40px auto 0;
+            }
+            @include sp{
+                margin: convertToVw(48) auto 0;
+                width: convertToVw(670);
+            }
+        }
+        .saveImage_herbarium,.saveImage_exp{
+            @include pc{
+                width: 402px;
+                height: 402px;
+            }
+            @include sp{
+                width: convertToVw(670);
+                height: convertToVw(670);
+            }
+        }
+        .saveImage_exp{
+            @include sp{
+                margin-top: convertToVw(48);
+            }
+        }
+    }
+}

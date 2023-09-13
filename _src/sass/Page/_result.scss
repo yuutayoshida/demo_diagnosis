@@ -1,0 +1,709 @@
+@use '../Global/global' as *;
+
+$pageName: 'shindan_result';
+
+.#{$projectName} {
+    &##{$pageName} {
+        main{
+            overflow: hidden;
+        }
+        background-color: $backgroundColor;
+        .btn_list{
+            display: flex;
+            justify-content: space-between;
+            @include pc{
+                width: 322px;
+                height: 40px;
+            }
+            @include sp{
+                width: convertToVw(670);
+                height: convertToVw(88);
+            }
+            .btn_saveImage{
+                @include pc{
+                    overflow: hidden;
+                    width: 170px;
+                    height: 40px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 16px 0 rgba(113, 85, 85, 0.1);
+                    a:hover{
+                        picture{
+                            transform: translate3d(0,-40px,0);
+                        }
+                    }
+                }
+                @include sp{
+                    width: convertToVw(350);
+                    height: convertToVw(88);
+                    border-radius: convertToVw(16);
+                    box-shadow: 0 0 convertToVw(16) 0 rgba(113, 85, 85, 0.1);
+                }
+                picture{
+                    transform: translate3d(0,0,0);
+                    @include pc{
+                        width: 170px;
+                        height: 80px;
+                    }
+                }
+            }
+            .btn_share{
+                border-radius: 50%;
+                @include pc{
+                    overflow: hidden;
+                    width: 40px;
+                    height: 40px;
+                    box-shadow: 0 0 16px 0 rgba(113, 85, 85, 0.1);
+                    a:hover{
+                        picture{
+                            transform: translate3d(0,-40px,0);
+                        }
+                    }
+                }
+                @include sp{
+                    width: convertToVw(88);
+                    height: convertToVw(88);
+                    box-shadow: 0 0 convertToVw(16) 0 rgba(113, 85, 85, 0.1);
+                }
+                picture{
+                    transform: translate3d(0,0,0);
+                    @include pc{
+                        width: 40px;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+
+        .herbarium{
+            position: relative;
+            overflow: hidden;
+            @include pc{
+                padding-bottom: 32px;
+            }
+            @include sp{
+                padding-bottom: convertToVw(132);
+            }
+            .bg_circleObj{
+                position: absolute;
+                left: 50%;
+            }
+            .bg_circleObj-1{
+                @include pc{
+                    top: 161px;
+                    width: 189px;
+                    height: 164px;
+                    margin-left: -575px;
+                }
+                @include sp{
+                    top: convertToVw(236);
+                    width: convertToVw(189);
+                    height: convertToVw(164);
+                    margin-left: convertToVw(-466);
+                }
+            }
+            .bg_circleObj-2{
+                @include pc{
+                    top: -115px;
+                    width: 411px;
+                    height: 383px;
+                    margin-left: -712px;
+                }
+                @include sp{
+                    top: convertToVw(-104);
+                    width: convertToVw(411);
+                    height: convertToVw(383);
+                    margin-left: convertToVw(-540);
+                }
+            }
+            .bg_circleObj-3{
+                @include pc{
+                    top: 240px;
+                    width: 346px;
+                    height: 364px;
+                    margin-left: 325px;
+                }
+                @include sp{
+                    top: convertToVw(487);
+                    width: convertToVw(346);
+                    height: convertToVw(364);
+                    margin-left: convertToVw(141);
+                }
+            }
+            .bg_obj{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                @include pc{
+                    width: 1258px;
+                    height: 688px;
+                    margin-left: -690px;
+                }
+                @include sp{
+                    width: convertToVw(991);
+                    height: convertToVw(1094);
+                    margin-left: convertToVw(-448);
+                }
+            }
+            &.bg_motivation{
+                background-color: #ebdd93;
+                .bg_circleObj-1 path{
+                    fill: #b6b5db;
+                }
+                .bg_circleObj-2 path{
+                    fill: #f6c079;
+                }
+                .bg_circleObj-3 path{
+                    fill: #e7a9a8;
+                }
+            }
+            &.bg_carefree{
+                background-color: #f5d1d0;
+                .bg_circleObj-1 path{
+                    fill: #b6b5db;
+                }
+                .bg_circleObj-2 path{
+                    fill: #e7a9a8;
+                }
+                .bg_circleObj-3 path{
+                    fill: #fce8b3;
+                }
+            }
+            &.bg_ephemeral{
+                background-color: #b5c9db;
+                .bg_circleObj-1 path{
+                    fill: #e7a9a8;
+                }
+                .bg_circleObj-2 path{
+                    fill: #b6b5db;
+                }
+                .bg_circleObj-3 path{
+                    fill: #fce8b3;
+                }
+            }
+            &:after{
+                @include pseudoElement;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                background: url('/images/common/wave_white.png') repeat-x;
+                @include pc{
+                    height: 15px;
+                    background-size: 80px 15px;
+                }
+                @include sp{
+                    height: convertToVw(15);
+                    background-size: convertToVw(80) convertToVw(15);
+                }
+            }
+        }
+        .herbarium_secTitle{
+            position: relative;
+            @include pc{
+                width: 300px;
+                height: 67px;
+                margin: 86px 0 0 661px;
+            }
+            @include sp{
+                width: convertToVw(398);
+                height:convertToVw(88);
+                margin: convertToVw(76) auto 0;
+            }
+            .secTitle_path{
+                fill: none;
+                stroke: #fff;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 2px;
+            }
+            #secTitle-1{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                @include pc{
+                    width: 131px;
+                    height: 61px;
+                }
+                @include sp{
+                    width: convertToVw(174);
+                    height: convertToVw(81);
+                }
+            }
+            #secTitle-2{
+                position: absolute;
+                top: 0;
+                @include pc{
+                    left: 146px;
+                    width: 154px;
+                    height: 48px;
+                }
+                @include sp{
+                    left: convertToVw(193);
+                    width: convertToVw(204);
+                    height: convertToVw(63);
+                }
+            }
+            #secTitle-3{
+                position: absolute;
+                @include pc{
+                    top: 16px;
+                    left: 227px;
+                    width: 5px;
+                    height: 6px;
+                }
+                @include sp{
+                    top: convertToVw(22);
+                    left: convertToVw(300);
+                    width: convertToVw(5);
+                    height: convertToVw(8);
+                }
+            }
+        }
+        .herbarium_inner{
+            @include pc{
+                display: flex;
+                margin-top: -67px;
+                padding-left: 40px;
+            }
+        }
+        .herbariumImage_wrap{
+            position: relative;
+            @include pc{
+                width: 360px;
+                height: 480px;
+                margin-top: 67px;
+            }
+            @include sp{
+                width: convertToVw(590);
+                height: convertToVw(788);
+                margin: convertToVw(9) auto 0;
+            }
+            &.carefree{
+                @include pc{
+                    margin-top: 0;
+                }
+                @include sp{
+                    margin: convertToVw(-71) auto 0;
+                }
+            }
+        }
+        .herbarium_image{
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include pc{
+                width: 360px;
+                height: 480px;
+            }
+            @include sp{
+                width: convertToVw(590);
+                height: convertToVw(788);
+            }
+        }
+        .herbarium_exp{
+            transform-origin: bottom right;
+            @include pc{
+                width: 552px;
+                height: 178px;
+                margin: 112px 0 0 -32px;
+                transform: rotate(-3deg);
+            }
+            @include sp{
+                width: convertToVw(813);
+                height: convertToVw(322);
+                transform: rotate(-5deg);
+                margin: convertToVw(-118) 0 0 convertToVw(-158);
+            }
+        }
+        .herbarium_detail{
+            .btn_list{
+                @include pc{
+                    margin: 62px 0 0 238px;
+                }
+                @include sp{
+                    margin-top: convertToVw(80);
+                }
+            }
+        }
+
+        .scrollNav_wrap{
+            @include sp{
+                position: absolute;
+                top: convertToVw(1180);
+                left: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: convertToVw(240);
+                height: convertToVw(240);
+                margin: convertToVw(-120) 0 0 convertToVw(-120);
+                border-radius: 50%;
+                background-color: rgba(233,138,136,0.7);
+            }
+        }
+        .scroll_nav{
+            @include sp{
+                @include setFontSizeSP(24,24);
+                font-weight: $fwBold;
+                text-align: center;
+                color: #ffffff;
+            }
+        }
+        .scrollNav_line{
+            @include sp{
+                content: '';
+                display: block;
+                width: convertToVw(4);
+                height: convertToVw(72);
+                margin: convertToVw(20) auto 0;
+                background-color: #ffffff;
+            }
+        }
+
+        .result_detail{
+            position: relative;
+            overflow: hidden;
+            .bg_obj{
+                position: absolute;
+                left: 50%;
+                @include pc{
+                    top: 0;
+                    width: 1297px;
+                    height: 309px;
+                    margin-left: -648px;
+                }
+                @include sp{
+                    top: convertToVw(-136);
+                    width: convertToVw(928);
+                    height: convertToVw(409);
+                    margin-left: convertToVw(-515);
+                }
+            }
+        }
+        .resultDetail_inner{
+            @include pc{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 80px;
+            }
+            @include sp{
+                padding-top: convertToVw(80);
+            }
+        }
+        .resultSummary_wrap{
+            @include pc{
+                width: 468px;
+            }
+        }
+        .result_summary{
+            display: flex;
+        }
+        .resultSummary_text{
+            color: $contentTextColor;
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+            @include pc{
+                width: 466px;
+                padding: 0 24px 0 21px;
+            }
+            @include sp{
+                padding-left: convertToVw(32);
+            }
+        }
+        .result_advice{
+            position: relative;
+            @include pc{
+                width: 442px;
+            }
+            @include sp{
+                width: convertToVw(670);
+                margin-top: convertToVw(68);
+            }
+            &:before{
+                @include pseudoElement;
+                background-color: #8a88c2;
+                width: 100%;
+                left: 0;
+                @include pc{
+                    top: 25px;
+                    height: 2px;
+                }
+                @include sp{
+                    top: convertToVw(44);
+                    height: convertToVw(2);
+                }
+
+            }
+        }
+        .resultAdvice_image{
+            @include pc{
+                width: 84px;
+                height: 17px;
+            }
+            @include sp{
+                width: convertToVw(126);
+                height: convertToVw(26);
+            }
+        }
+        .resultAdvice_text{
+            color: $contentTextColor;
+            font-weight: 300;
+            @include pc{
+                margin-top: 26px - getHalfReading(14,24);
+                @include setFontSize(14,24);
+            }
+            @include sp{
+                margin-top: convertToVw(50 - getHalfReading(28,46));
+                @include setFontSizeSP(28,46);
+            }
+        }
+        .result_summary-condition{
+            .resultSummary_image{
+                flex-shrink: 0;
+                @include pc{
+                    width: 157px;
+                    height: 66px;
+                }
+                @include sp{
+                    width: convertToVw(241);
+                    height: convertToVw(104);
+                }
+            }
+            .resultSummary_text{
+                @include pc{
+                    margin-top: 0px - getHalfReading(20,32);
+                    @include setFontSize(20,32);
+                }
+                @include sp{
+                    margin-top: convertToVw(0 - getHalfReading(38,50));
+                    @include setFontSizeSP(38,50);
+                }
+            }
+        }
+        .result_summary-strength{
+            @include pc{
+                margin-top: 24px;
+            }
+            @include sp{
+                margin-top: convertToVw(64);
+            }
+            .resultSummary_image{
+                flex-shrink: 0;
+                @include pc{
+                    width: 157px;
+                    height: 52px;
+                }
+                @include sp{
+                    width: convertToVw(241);
+                    height: convertToVw(81);
+                }
+            }
+            .resultSummary_text{
+                @include pc{
+                    margin-top: 0px - getHalfReading(15,27);
+                    @include setFontSize(15,27);
+                }
+                @include sp{
+                    margin-top: convertToVw(0 - getHalfReading(28,46));
+                    @include setFontSizeSP(28,46);
+                }
+            }
+        }
+        .result_summary-concern{
+            @include pc{
+                margin-top: 20px;
+            }
+            @include sp{
+                margin-top: convertToVw(64);
+            }
+            .resultSummary_image{
+                flex-shrink: 0;
+                @include pc{
+                    width: 157px;
+                    height: 68px;
+                }
+                @include sp{
+                    width: convertToVw(241);
+                    height: convertToVw(123);
+                }
+            }
+            .resultSummary_text{
+                @include pc{
+                    margin-top: 0px - getHalfReading(15,27);
+                    @include setFontSize(15,27);
+                }
+                @include sp{
+                    margin-top: convertToVw(0 - getHalfReading(28,46));
+                    @include setFontSizeSP(28,46);
+                }
+            }
+        }
+
+        .bnrArea{
+            position: relative;
+            @include pc{
+                overflow: hidden;
+                padding: 61px 0 152px;
+            }
+            @include sp{
+                padding: convertToVw(136 - getHalfReading(28,46)) 0 convertToVw(111);
+            }
+            .bg_circleObj{
+                position: absolute;
+                left: 50%;
+            }
+            .bg_circleObj-1{
+                @include pc{
+                    top: 251px;
+                    width: 236px;
+                    height: 267px;
+                    margin-left: -565px;
+                }
+                @include sp{
+                    top: convertToVw(129);
+                    width: convertToVw(236);
+                    height: convertToVw(267);
+                    margin-left: convertToVw(-515);
+                }
+                path{
+                    fill: #fce8b3;
+                }
+            }
+            .bg_circleObj-2{
+                @include pc{
+                    top: 134px;
+                    width: 292px;
+                    height: 241px;
+                    margin-left: -620px;
+                }
+                @include sp{
+                    top: convertToVw(12);
+                    width: convertToVw(292);
+                    height: convertToVw(241);
+                    margin-left: convertToVw(-550);
+                }
+                path {
+                    fill: #b9d4cf;
+                }
+
+            }
+            .bg_circleObj-3{
+                @include pc{
+                    top: 344px;
+                    width: 210px;
+                    height: 286px;
+                    margin-left: 416px;
+                }
+                @include sp{
+                    top: convertToVw(631);
+                    width: convertToVw(210);
+                    height: convertToVw(286);
+                    margin-left: convertToVw(245);
+                }
+                path{
+                    fill: #e7a9a8;
+                }
+            }
+            .bg_obj{
+                pointer-events: none;
+                position: absolute;
+                left: 50%;
+                @include pc{
+                    top: 109px;
+                    width: 1258px;
+                    height: 527px;
+                    margin-left: -603px;
+                }
+                @include sp{
+                    top: convertToVw(-19);
+                    width: convertToVw(1044);
+                    height: convertToVw(908);
+                    margin-left: convertToVw(-522);
+                }
+            }
+            .btn_list{
+                @include pc{
+                    margin: 64px 0 0 638px;
+                }
+                @include sp{
+                    margin-top: convertToVw(120);
+                }
+            }
+        }
+
+        .bnrArea_title{
+            margin: 0 auto;
+            @include pc{
+                width: 739px;
+                height: 25px;
+            }
+            @include sp{
+                width: convertToVw(535);
+                height: convertToVw(170);
+            }
+        }
+        .coupon{
+            position: relative;
+            @include pc{
+                width: 443px;
+                height: 180px;
+                margin: 24px auto 0;
+                a:hover{
+                    opacity: 0.7;
+                }
+            }
+            @include sp{
+                width: convertToVw(590);
+                height: convertToVw(240);
+                margin: convertToVw(17) auto 0;
+            }
+            &:before{
+                @include pseudoElement;
+                @include pc{
+                    top: -7px;
+                    right: -157px;
+                    width: 129px;
+                    height: 131px;
+                    @include backgroundFig('/result/coupon_msg.png');
+                }
+                @include sp{
+                    top: convertToVw(-231);
+                    right: convertToVw(-89);
+                    width: convertToVw(161);
+                    height: convertToVw(163);
+                    @include backgroundFig('/result/sp-coupon_msg.png');
+                }
+            }
+        }
+
+        .btn_restart{
+            @include pc{
+                overflow: hidden;
+                width: 320px;
+                height: 80px;
+                margin: 64px auto 0;
+                border-radius: 40px;
+                box-shadow: 0 0 16px 0 rgba(113, 85, 85, 0.1);
+                picture{
+                    @include pc{
+                        width: 320px;
+                        height: 160px;
+                    }
+                }
+                a:hover{
+                    picture{
+                        transform: translate3d(0,-80px,0);
+                    }
+                }
+            }
+            @include sp{
+                position: relative;
+                width: convertToVw(590);
+                height: convertToVw(130);
+                margin: convertToVw(120) auto convertToVw(88);
+                border-radius: convertToVw(65);
+                box-shadow: 0 0 convertToVw(16) 0 rgba(113, 85, 85, 0.1);
+            }
+        }
+    }
+}

@@ -1,0 +1,294 @@
+@use '../Global/global' as *;
+
+$pageName: 'shindan_top';
+
+.#{$projectName} {
+    &##{$pageName} {
+        main{
+            overflow: hidden;
+        }
+        background-color: $BaseBackgroundColor;
+
+        .mv{
+            position: relative;
+            overflow: hidden;
+            background: $contentBackgroundColor;
+            @include pc{
+                height: 479px;
+            }
+            @include sp{
+                height: convertToVw(795);
+            }
+            .bg_obj{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                @include pc{
+                    width: 1268px;
+                    height: 617px;
+                    margin-left: -687px;
+                }
+                @include sp{
+                    width: convertToVw(990);
+                    height: convertToVw(887);
+                    margin-left: convertToVw(-495);
+                }
+            }
+            .bg_circleObj{
+                position: absolute;
+                left: 50%;
+            }
+            .bg_circleObj-1{
+                @include pc{
+                    top: 161px;
+                    width: 189px;
+                    height: 164px;
+                    margin-left: -575px;
+                }
+                @include sp{
+                    top: convertToVw(236);
+                    width: convertToVw(189);
+                    height: convertToVw(164);
+                    margin-left: convertToVw(-466);
+                }
+                path{
+                    fill: #b6b5db;
+                }
+            }
+            .bg_circleObj-2{
+                @include pc{
+                    top: -115px;
+                    width: 411px;
+                    height: 383px;
+                    margin-left: -712px;
+                }
+                @include sp{
+                    top: convertToVw(-104);
+                    width: convertToVw(411);
+                    height: convertToVw(383);
+                    margin-left: convertToVw(-540);
+                }
+                path {
+                    fill: #e7a9a8;
+                }
+
+            }
+            .bg_circleObj-3{
+                @include pc{
+                    top: 240px;
+                    width: 346px;
+                    height: 364px;
+                    margin-left: 325px;
+                }
+                @include sp{
+                    top: convertToVw(487);
+                    width: convertToVw(346);
+                    height: convertToVw(364);
+                    margin-left: convertToVw(141);
+                }
+                path{
+                    fill: #fce8b3;
+                }
+            }
+        }
+        .mv_inner{
+            @include pc{
+                padding-top: 64px;
+            }
+            @include sp{
+                padding-top: convertToVw(67);
+            }
+        }
+        .site_title{
+            margin: 0 auto;
+            @include pc{
+                width: 218px;
+                height: 90px;
+            }
+            @include sp{
+                width: convertToVw(383);
+                height: convertToVw(171);
+            }
+        }
+        .herbariumImage_wrap{
+            display: flex;
+            align-items: flex-end;
+            @include pc{
+                justify-content: space-between;
+                width: 412px;
+                height: 222px;
+                margin: 21px auto 0;
+            }
+            @include sp{
+                justify-content: center;
+                width: convertToVw(670);
+                height: convertToVw(390);
+                margin: convertToVw(42) auto 0;
+            }
+        }
+        .herbarium_image-motivation{
+            @include pc{
+                width: 132px;
+                height: 222px;
+            }
+            @include sp{
+                width: convertToVw(220);
+                height: convertToVw(390);
+            }
+        }
+        .herbarium_image-ephemeral{
+            @include pc{
+                width: 134px;
+                height: 222px;
+            }
+            @include sp{
+                width: convertToVw(224);
+                height: convertToVw(390);
+                margin-left: convertToVw(-8);
+            }
+        }
+        .herbarium_image-carefree{
+            @include pc{
+                width: 146px;
+                height: 222px;
+            }
+            @include sp{
+                width: convertToVw(248);
+                height: convertToVw(390);
+                margin-left: convertToVw(-20);
+            }
+        }
+
+        .lead{
+            position: relative;
+            @include pc{
+                padding-top: 36px;
+            }
+            @include sp{
+                padding-top: convertToVw(56);
+            }
+            &:before{
+                @include pseudoElement;
+                width: 100%;
+                left: 0;
+                background: url('/images/common/wave_gray.png') repeat-x;
+                @include pc{
+                    top: -15px;
+                    height: 15px;
+                    background-size: 80px 15px;
+                }
+                @include sp{
+                    top: convertToVw(-15);
+                    height: convertToVw(15);
+                    background-size: convertToVw(80) convertToVw(15);
+                }
+            }
+        }
+        .lead_present{
+            position: absolute;
+            left: 50%;
+            @include pc{
+                top: -71px;
+                width: 221px;
+                height: 180px;
+                margin-left: 121px;
+            }
+            @include sp{
+                top: convertToVw(-148);
+                width: convertToVw(299);
+                height: convertToVw(241);
+                margin-left: convertToVw(103);
+            }
+        }
+        .lead_text{
+            margin: 0 auto;
+            @include pc{
+                width: 276px;
+                height: 65px;
+            }
+            @include sp{
+                width: convertToVw(379);
+                height: convertToVw(90);
+            }
+        }
+
+        .btn_start{
+            @include pc{
+                overflow: hidden;
+                width: 320px;
+                height: 80px;
+                margin: 33px auto 160px;
+                picture{
+                    @include pc{
+                        width: 320px;
+                        height: 160px;
+                    }
+                }
+                a:hover{
+                    picture{
+                        transform: translate3d(0,-80px,0);
+                    }
+                }
+            }
+            @include sp{
+                width: convertToVw(590);
+                height: convertToVw(130);
+                margin: convertToVw(47) auto convertToVw(168);
+            }
+        }
+
+        .beforeLoading{
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            width: 100vw;
+            height: 100vh;
+            background-color: $BaseBackgroundColor;
+        }
+
+        .intro{
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            @include pc{
+                background: url('/images/top/intro_bg.png') top left / cover;
+            }
+            @include sp{
+                background: url('/images/top/sp-intro_bg.png') top left / cover;
+            }
+        }
+        .intro_lead{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include pc{
+                width: 310px;
+                height: 198px;
+                margin: -163px 0 0 -155px;
+            }
+            @include sp{
+                width: convertToVw(489);
+                height: convertToVw(279);
+                margin: convertToVw(-219) 0 0 convertToVw(-244);
+            }
+        }
+        .introLead_text{
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            @include pc{
+                width: 310px;
+                height: 198px;
+            }
+            @include sp{
+                width: convertToVw(489);
+                height: convertToVw(279);
+            }
+        }
+    }
+}

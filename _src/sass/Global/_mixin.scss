@@ -1,0 +1,74 @@
+@use 'config' as *;
+@use 'function' as *;
+@use "sass:math";
+
+// レスポンシブ
+@mixin pc($break-point: $break-point) {
+    @media screen and (min-width: #{$break-point + 1}), print {
+        @content;
+    }
+}
+
+@mixin sp($break-point: $break-point) {
+    @media screen and (max-width: #{$break-point}) {
+        @content;
+    }
+}
+
+// 背景画像差し替え
+@mixin backgroundFig($url) {
+    background: url("#{$imgPath}#{$url}") no-repeat 50% 50% / contain;
+}
+
+//疑似要素（絶対配置）
+@mixin pseudoElement {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+// aタグを親要素と同じ大きさに
+@mixin blockInline {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin backgroundText($url) {
+    @include backgroundFig($url);
+    text-indent: -9999px;
+}
+
+
+// フォントサイズ
+@mixin setFontSize($fz, $lh) {
+    font-size: #{$fz}px;
+    line-height: math.div($lh, $fz);
+}
+
+@mixin setFontSizeSP($fz, $lh) {
+    font-size: convertToVw($fz);
+    line-height: math.div($lh, $fz);
+}
+
+// clearfix
+@mixin clearfix {
+    *zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+//ホバーエフェクト
+@mixin hoverEffect($opacity: 0.7) {
+    &:hover {
+        opacity: $opacity;
+    }
+}
+
+
+@mixin animeSet{
+    perspective: 1000;
+}

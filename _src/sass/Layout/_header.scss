@@ -1,0 +1,45 @@
+@use '../Global/global' as *;
+
+.#{$projectName} {
+    header{
+        background: $backgroundColor;
+        @include pc{
+            height: 64px;
+        }
+        @include sp{
+            height: convertToVw(80);
+        }
+    }
+    .header_inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        @include pc{
+            height: 64px;
+        }
+        @include sp{
+            height: convertToVw(80);
+        }
+    }
+    .headerLogo-project{
+        @include pc{
+            width: 78px;
+            height: 33px;
+        }
+        @include sp{
+            width: convertToVw(98);
+            height: convertToVw(40);
+        }
+    }
+    .headerLogo-company{
+        @include pc{
+            width: 105px;
+            height: 25px;
+        }
+        @include sp{
+            width: convertToVw(142);
+            height: convertToVw(32);
+        }
+    }
+}

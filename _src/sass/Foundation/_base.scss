@@ -1,0 +1,59 @@
+@use '../Global/global' as *;
+
+.#{$projectName} {
+
+    font-family: $defaultFontFamily;
+    color: $primaryTextColor;
+    background-color: $backgroundColor;
+    @include pc {
+        @include setFontSize($defaultFontSize, $defaultLineHeight);
+        min-width: $minAreaPC;
+    }
+    @include sp {
+        @include setFontSizeSP($defaultFontSizeSP, $defaultLineHeightSP);
+    }
+
+    picture {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        outline: 0;
+    }
+
+    .pc {
+        @include sp {
+            display: none;
+        }
+    }
+
+    .sp {
+        @include pc {
+            display: none;
+        }
+    }
+
+    .inner {
+        margin: auto;
+        @include pc {
+            max-width: $contentWidthPc;
+        }
+        @include sp {
+            max-width: convertToVw($contentsWidthSP);
+        }
+    }
+
+    .contents_wrap {
+        overflow: hidden;
+    }
+
+
+
+}

@@ -1,0 +1,366 @@
+@use '../Global/global' as *;
+@use "sass:math";
+
+$className: 'isAnimationStarted';
+.#{$projectName} {
+    &#shindan_top {
+        .intro{
+            opacity: 0;
+            .introLead_text{
+                opacity: 0;
+                filter: blur(0px);
+                transform: scale(1);
+            }
+            &.#{$className} {
+                animation: 1200ms $linear 0ms 1 normal forwards running fadeIn, 800ms $linear 5200ms 1 normal forwards running fadeOut;
+                .introLead_text-1{
+                    animation: 1400ms $linear 1200ms 1 normal forwards running fadeIn,  800ms $linear 5000ms 1 normal forwards running blurFadeOut;
+                }
+                .introLead_text-2{
+                    animation: 1400ms $linear 2100ms 1 normal forwards running fadeIn, 800ms $linear 5000ms 1 normal forwards running blurFadeOut;
+                }
+                .introLead_text-3{
+                    animation: 1400ms $linear 3000ms 1 normal forwards running fadeIn, 800ms $linear 5000ms 1 normal forwards running blurFadeOut;
+                }
+            }
+        }
+
+        .bg_circleObj-1 {
+            opacity: 0;
+            &.#{$className} {
+                animation: 800ms $linear 1300ms 1 normal forwards running fadeIn;
+            }
+        }
+        .bg_circleObj-2 {
+            opacity: 0;
+            &.#{$className} {
+                animation: 800ms $linear 1300ms 1 normal forwards running fadeIn;
+            }
+        }
+        .bg_circleObj-3 {
+            opacity: 0;
+            &.#{$className} {
+                animation: 800ms $linear 1300ms 1 normal forwards running fadeIn;
+            }
+        }
+        .bg_obj {
+            opacity: 0;
+            &.#{$className} {
+                animation: 800ms $linear 1100ms 1 normal forwards running fadeIn;
+            }
+        }
+        .site_title {
+            opacity: 0;
+            &.#{$className} {
+                animation: 600ms $linear 0ms 1 normal forwards running fadeIn;
+            }
+        }
+        .herbarium_image-motivation {
+            opacity: 0;
+            @include animeSet;
+            &.#{$className} {
+                animation: 800ms $linear 1100ms 1 normal forwards running fadeIn;
+            }
+        }
+        .herbarium_image-ephemeral {
+            opacity: 0;
+            @include animeSet;
+            &.#{$className} {
+                animation: 800ms $linear 900ms 1 normal forwards running fadeIn;
+            }
+        }
+        .herbarium_image-carefree {
+            opacity: 0;
+            @include animeSet;
+            &.#{$className} {
+                animation: 800ms $linear 1100ms 1 normal forwards running fadeIn;
+            }
+        }
+        .lead_present {
+            opacity: 0;
+            transform: translate3d(0, 10px, 0);
+            &.#{$className} {
+                animation: 600ms $linear 2400ms 1 normal forwards running fadeInFromUp;
+            }
+        }
+        .lead_text {
+            opacity: 0;
+            &.#{$className} {
+                animation: 800ms $linear 2000ms 1 normal forwards running fadeIn;
+            }
+        }
+        .btn_start {
+            opacity: 0;
+            @include animeSet;
+            &.#{$className} {
+                animation: 800ms $linear 2000ms 1 normal forwards running fadeIn;
+            }
+        }
+    }
+    &#shindan_content {
+        .btn-choice {
+            transform: scale(1);
+            &.clicked {
+                animation: 200ms $linear 0ms 1 normal forwards running btnClick;
+                @include pc{
+                    picture{
+                        transform: translateY(-88px);
+                    }
+                }
+                @include sp{
+                    picture{
+                        transform: translateY(convertToVw(-128));
+                    }
+                }
+            }
+        }
+        .intermediate {
+            .intermediate_lead {
+                opacity: 0;
+            }
+            .intermediate_imageWrap {
+                opacity: 0;
+                transform-origin: bottom center;
+                transform: rotate(0deg);
+            }
+            .bottomArea_inner{
+                opacity: 0;
+            }
+            .btn-next {
+                transform: scale(1);
+                &.clicked {
+                    animation: 200ms $linear 0ms 1 normal forwards running btnClick;
+                    @include pc{
+                        picture{
+                            transform: translateY(-64px);
+                        }
+                    }
+                    @include sp{
+                        picture{
+                            transform: translateY(convertToVw(-128));
+                        }
+                    }
+                }
+            }
+            &.#{$className} {
+                .intermediate_lead {
+                    animation: 600ms $linear 500ms 1 normal forwards running fadeIn;
+                }
+                .intermediate_imageWrap {
+                    animation: 400ms $linear 100ms 1 normal forwards running fadeIn, 300ms $easeOutQuad 1100ms 1 normal forwards running rotateObj;
+                }
+                .bottomArea_inner{
+                    animation: 600ms $linear 500ms 1 normal forwards running fadeIn;
+                }
+            }
+        }
+        #loading {
+            .loadingBar-wave {
+                @include pc {
+                    transform: translate(-60px, 220px);
+                }
+                @include sp {
+                    transform: translate(convertToVw(-85),convertToVw(312));
+                }
+            }
+            .loading_dot {
+                opacity: 0;
+                transform: translateY(0px);
+            }
+            &.#{$className} {
+                .loadingBar-wave{
+                    transition-property: transform;
+                    transition-duration: 4000ms;
+                    transition-delay: 1800ms;
+                    @include pc{
+                        transform: translate(60px,-10px);
+                    }
+                    @include sp{
+                        transform: translate(convertToVw(85),convertToVw(-15));
+                    }
+                }
+                .loading_dot {
+                    @for $cnt from 1 through 7 {
+                        &:nth-of-type(#{$cnt}) {
+                            $delay: $cnt * 400ms;
+                            @include pc{
+                                animation: 2000ms $easeInSine $delay infinite normal forwards dropDots;
+                            }
+                            @include sp{
+                                animation: 2000ms $easeInSine $delay infinite normal forwards dropDotsSP;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &#shindan_result {
+        .herbarium{
+            opacity: 0;
+            &.#{$className} {
+                animation: 800ms $ease-in 200ms 1 normal forwards running fadeIn;
+            }
+            .bg_circleObj-1 {
+                opacity: 0;
+                &.#{$className} {
+                    animation: 800ms $linear 5600ms 1 normal forwards running fadeIn;
+                }
+            }
+            .bg_circleObj-2 {
+                opacity: 0;
+                &.#{$className} {
+                    animation: 800ms $linear 5600ms 1 normal forwards running fadeIn;
+                }
+            }
+            .bg_circleObj-3 {
+                opacity: 0;
+                &.#{$className} {
+                    animation: 800ms $linear 5600ms 1 normal forwards running fadeIn;
+                }
+            }
+            .bg_obj {
+                opacity: 0;
+                &.#{$className} {
+                    animation: 800ms $linear 5200ms 1 normal forwards running fadeIn;
+                }
+            }
+        }
+        .herbarium_secTitle{
+            @include pc{
+                transform: translateX(-331px);
+            }
+            #secTitle-1 path {
+                stroke-dasharray: 289 289;
+                stroke-dashoffset: 289;
+            }
+            #secTitle-2 path {
+                fill-rule: evenodd;
+                stroke-dasharray: 352 352;
+                stroke-dashoffset: 352;
+            }
+            #secTitle-3 path {
+                fill-rule: evenodd;
+                stroke-dasharray: 3 3;
+                stroke-dashoffset: 3;
+            }
+            &.#{$className} {
+                @include pc{
+                    animation:  2000ms $ease-in-out 5000ms 1 normal forwards running slideRightSecTitle;
+                }
+                #secTitle-1 path {
+                    animation:  1000ms $linear 1200ms 1 normal forwards running stroke_your;
+                }
+                #secTitle-2 path {
+                    animation:  1100ms $linear 2200ms 1 normal forwards running stroke_skin;
+                }
+                #secTitle-3 path {
+                    animation:  100ms $linear 3300ms 1 normal forwards running stroke_dot;
+                }
+            }
+        }
+        .herbarium_inner{
+            .herbariumImage_wrap{
+                @include pc{
+                    transform: translateX(260px);
+                }
+            }
+            .herbarium_image-1,
+            .herbarium_image-2,
+            .herbarium_image-3,
+            .herbarium_image-4,
+            .herbarium_image-5,
+            .herbarium_detail
+            {
+                will-change: animation;
+                opacity: 0;
+            }
+            &.#{$className} {
+                .herbariumImage_wrap{
+                    @include pc{
+                        animation: 2000ms $ease-in-out 5000ms 1 normal forwards running slideLeftImage;
+                    }
+                }
+                .herbarium_image-1 {
+                    animation: 600ms $linear 3700ms 1 normal forwards running fadeIn,
+                                101ms $linear 4200ms 1 normal forwards running hideImage;
+                }
+                .herbarium_image-2 {
+                    animation: 101ms $linear 4300ms 1 normal backwards running changeImage;
+                }
+                .herbarium_image-3 {
+                    animation: 101ms $linear 4400ms 1 normal backwards running changeImage;
+                }
+                .herbarium_image-4 {
+                    animation: 101ms $linear 4500ms 1 normal backwards running changeImage;
+                }
+                .herbarium_image-5 {
+                    animation: 101ms $linear 4600ms 1 normal forwards running changeImage;
+                }
+                .herbarium_detail{
+                    @include pc{
+                        animation: 800ms $linear 6800ms 1 normal forwards running fadeIn;
+                    }
+                    @include sp{
+                        animation: 1000ms $linear 5000ms 1 normal forwards running fadeIn;
+                    }
+                }
+            }
+        }
+        .scrollNav_line{
+            @include sp{
+                opacity: 0;
+                transform: translateY(convertToVw(0)) scaleY(0.1);
+                transform-origin: top;
+                animation: 1600ms $linear 200ms infinite normal forwards running scroll;
+            }
+        }
+        .result_detail{
+            .bg_obj{
+                opacity: 0;
+            }
+            .resultDetail_inner{
+                opacity: 0;
+            }
+            &.#{$className} {
+                .bg_obj{
+                    @include pc{
+                        animation: 800ms $linear 6800ms 1 normal forwards running fadeIn;
+                    }
+                    @include sp{
+                        animation: 800ms $linear 200ms 1 normal forwards running fadeIn;
+                    }
+                }
+                .resultDetail_inner{
+                    @include pc{
+                        animation: 800ms $linear 6900ms 1 normal forwards running fadeIn;
+                    }
+                    @include sp{
+                        animation: 800ms $linear 300ms 1 normal forwards running fadeIn;
+                    }
+                }
+            }
+        }
+
+        .bnrArea_title{
+            opacity: 0;
+            &.#{$className} {
+                animation: 800ms $linear 300ms 1 normal forwards running fadeIn;
+            }
+        }
+        .coupon{
+            opacity: 0;
+            will-change: animation;
+            &:before{
+                transform: translate3d(0,0,0) rotate(0deg) scale(0.8);
+                transform-origin: bottom left;
+            }
+            &.#{$className} {
+                animation: 800ms $linear 700ms 1 normal forwards running fadeIn;
+                &:before{
+                    animation: 800ms $ease-out 700ms 1 normal forwards running shakeUp, 2600ms $easeInOutSine 1800ms infinite normal forwards running float;
+                }
+            }
+        }
+    }
+}
