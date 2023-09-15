@@ -1,31 +1,51 @@
-<?php
-$ogp_list = ['aC43', 'Zi4j', 'T7a3', 'Fn2J','fM4x','eZ4f','e6EM','w6BG','p7Ce','i9A3','Fy4H','V9dr','p3FE','f9UV','pR5A','vE84','x5Pc','Bw4y','N3pB','sP9k','b9Xq','uT8H','pR5H','s6Fu','J7tG','w4Sd','Jw4G'];
 
-// OGP画像 動的変更用にGETパラメータ取得
-if(isset($_GET['object'])){
-    if (in_array($_GET['object'], $ogp_list)) {
-        // tapas_listに存在するtpsが指定されている場合
-        $objName = $_GET['object'];
-        $ogp_path = "ogp_{$objName}.png";
-    } else {
-        // tapas_listに存在しないtpsが指定されている場合
-        $ogp_path = "ogp_default.png";
-    }
-} else {
-    // パラメータが指定されていない場合
-    $ogp_path = 'ogp_default.png';
-}
 
-$page_id = 'shindan_top';
-$meta_title = 'demo';
-$meta_description = 'demo';
-$og_url = 'https://test/';
-$og_image = "https://test/images/ogp/{$ogp_path}";
-
-$is_useLibrary = true;
-
-include($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
-?>
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <meta property="og:title" content="demo">
+    <meta property="og:description" content="demo">
+    <meta property="og:url" content="https://yuutayoshida.github.io/demo_diagnosis/">
+    <meta property="og:image" content="https://placehold.jp/1200x630.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="demo" />
+    <meta name="twitter:description" content="demo" />
+    <meta name="twitter:image" content="https://placehold.jp/1200x630.png">
+    
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    
+    <link rel="stylesheet" href="/css/style.css?v=220714">
+</head>
+<body class="shindan" id="shindan_top">
+<header>
+    <div class="inner">
+        <div class="header_inner">
+            <div class="headerLogo-project">
+                <a href="/">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="https://placehold.jp/98x40.png" sizes="100vw">
+                        <img src="https://placehold.jp/156x64.png" alt="">
+                    </picture>
+                </a>
+            </div>
+            <div class="headerLogo-company">
+                <a href="/">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="https://placehold.jp/142x32.png" sizes="100vw">
+                        <img src="https://placehold.jp/208x48.png" alt="">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
     <section class="mv">
         <div class="bg_circleObj bg_circleObj-1 js-animationLoadTarget">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.54 178.43">
@@ -293,29 +313,41 @@ include($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
             </picture>
         </a>
     </div>
-<div class="beforeLoading"></div>
-<div class="intro">
-    <p class="intro_lead">
-            <span class="introLead_text introLead_text-1">
-                <picture>
-                    <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-1.png" sizes="100vw">
-                    <img src="/images/top/intro_lead-1.png" alt="さぁ始めよう">
-                </picture>
-            </span>
-        <span class="introLead_text introLead_text-2">
-                <picture>
-                    <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-2.png" sizes="100vw">
-                    <img src="/images/top/intro_lead-2.png" alt="あなただけの">
-                </picture>
-            </span>
-        <span class="introLead_text introLead_text-3">
-                <picture>
-                    <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-3.png" sizes="100vw">
-                    <img src="/images/top/intro_lead-3.png" alt="美しさを知るために">
-                </picture>
-            </span>
-    </p>
-</div>
-<?php
-include ($_SERVER['DOCUMENT_ROOT'] .'/template/footer.php');
-?>
+    <div class="beforeLoading"></div>
+    <div class="intro">
+        <p class="intro_lead">
+                <span class="introLead_text introLead_text-1">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-1.png" sizes="100vw">
+                        <img src="/images/top/intro_lead-1.png" alt="さぁ始めよう">
+                    </picture>
+                </span>
+            <span class="introLead_text introLead_text-2">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-2.png" sizes="100vw">
+                        <img src="/images/top/intro_lead-2.png" alt="あなただけの">
+                    </picture>
+                </span>
+            <span class="introLead_text introLead_text-3">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-3.png" sizes="100vw">
+                        <img src="/images/top/intro_lead-3.png" alt="美しさを知るために">
+                    </picture>
+                </span>
+        </p>
+    </div>
+
+</main>
+<footer>
+    <div class="footer_inner">
+        <small class="footer_copyright">©demo </small>
+    </div>
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+<script src="/js/script.js"></script>
+</html>

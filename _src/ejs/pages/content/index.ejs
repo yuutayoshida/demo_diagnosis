@@ -1,5 +1,5 @@
 <%
-const ejsRoot = "../";
+const ejsRoot = "../../";
 
 const pageSettings = {
     pageId: "shindan_content",
@@ -11,7 +11,7 @@ const pageSettings = {
 }
 %>
 
-<%- include(ejsRoot + "template/header.ejs", {meta.pageSettings}); %>
+<%- include(ejsRoot + "template/header.ejs", {meta: pageSettings}); %>
     <div id="diagnose">
         <div class="bg_obj">
             <picture>
@@ -128,4 +128,4 @@ const pageSettings = {
 
         </div>
     </div>
-    <%- include(ejsRoot + "template/footer.ejs", {meta.pageSettings}); %>
+    <%- include(ejsRoot + "template/footer.ejs", {meta: pageSettings}); %>

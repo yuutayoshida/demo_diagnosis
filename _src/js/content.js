@@ -38,7 +38,7 @@
     let $displayQuestion;
 
     //結果ページに渡すパタメータ
-    let totalResultImageParam;
+    let totalResultParam;
     let totalResultTypeParam;
     let totalResultTextParam;
 
@@ -398,7 +398,7 @@
     function getTotalResult() {
         const resultData = window.DEMO_APP.resultData;
 
-        totalResultImageParam = resultData[resultTypeList[0]][resultTypeList[1]][resultTypeList[2]].param
+        totalResultParam = resultData[resultTypeList[0]][resultTypeList[1]][resultTypeList[2]].param
         totalResultTextParam = resultData[resultTypeList[0]][resultTypeList[1]][resultTypeList[2]].text;
 
         const duplicate = resultTypeList.filter(function (val, index, arr) {
@@ -421,7 +421,7 @@
      * リダイレクト
      */
     function redirectResult() {
-        location.href = '/result/?object=' + totalResultImageParam + '&result=' + totalResultTypeParam + '&text=' + totalResultTextParam;
+        location.href = '/result/' + totalResultParam + '.html';
     }
 
 })(jQuery);

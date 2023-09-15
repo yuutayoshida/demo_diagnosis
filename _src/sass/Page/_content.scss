@@ -209,7 +209,7 @@ $pageName: 'shindan_content';
             }
             @include sp{
                 width: convertToVw(320);
-                height: convertToVw(128);
+                height: convertToVw(98);
                 border-radius: convertToVw(64);
                 box-shadow: 0 0 convertToVw(16) 0 rgba(113, 85, 85, 0.1);
             }

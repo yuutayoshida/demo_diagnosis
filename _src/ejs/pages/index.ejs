@@ -1,5 +1,5 @@
 <%
-const ejsRoot = "./";
+const ejsRoot = "../";
 
 const pageSettings = {
     pageId: "shindan_top",
@@ -11,7 +11,7 @@ const pageSettings = {
 }
 %>
 
-<%- include(ejsRoot + "template/header.ejs", {meta.pageSettings}); %>
+<%- include(ejsRoot + "template/header.ejs", {meta: pageSettings}); %>
     <section class="mv">
         <div class="bg_circleObj bg_circleObj-1 js-animationLoadTarget">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.54 178.43">
@@ -279,28 +279,28 @@ const pageSettings = {
             </picture>
         </a>
     </div>
-<div class="beforeLoading"></div>
-<div class="intro">
-    <p class="intro_lead">
-            <span class="introLead_text introLead_text-1">
-                <picture>
-                    <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-1.png" sizes="100vw">
-                    <img src="/images/top/intro_lead-1.png" alt="さぁ始めよう">
-                </picture>
-            </span>
-        <span class="introLead_text introLead_text-2">
-                <picture>
-                    <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-2.png" sizes="100vw">
-                    <img src="/images/top/intro_lead-2.png" alt="あなただけの">
-                </picture>
-            </span>
-        <span class="introLead_text introLead_text-3">
-                <picture>
-                    <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-3.png" sizes="100vw">
-                    <img src="/images/top/intro_lead-3.png" alt="美しさを知るために">
-                </picture>
-            </span>
-    </p>
-</div>
+    <div class="beforeLoading"></div>
+    <div class="intro">
+        <p class="intro_lead">
+                <span class="introLead_text introLead_text-1">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-1.png" sizes="100vw">
+                        <img src="/images/top/intro_lead-1.png" alt="さぁ始めよう">
+                    </picture>
+                </span>
+            <span class="introLead_text introLead_text-2">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-2.png" sizes="100vw">
+                        <img src="/images/top/intro_lead-2.png" alt="あなただけの">
+                    </picture>
+                </span>
+            <span class="introLead_text introLead_text-3">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-3.png" sizes="100vw">
+                        <img src="/images/top/intro_lead-3.png" alt="美しさを知るために">
+                    </picture>
+                </span>
+        </p>
+    </div>
 
-<%- include(ejsRoot + "template/footer.ejs", {meta.pageSettings}); %>
+<%- include(ejsRoot + "template/footer.ejs", {meta: pageSettings}); %>

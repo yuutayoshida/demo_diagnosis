@@ -1,19 +1,51 @@
-<%
-const ejsRoot = "../../";
 
-const pageSettings = {
-    pageId: "shindan_result",
-    title: "demo",
-    description: "demo",
-    url: `https://yuutayoshida.github.io/demo_diagnosis/result/${totalResult}.html`,
-    ogpUrl: `https://yuutayoshida.github.io/demo_diagnosis/images/ogp/${totalResult}.png`,
-    useLibrary: "false",
-}
-%>
    
-<%- include(ejsRoot + "template/header.ejs", {meta: pageSettings}); %>
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <meta property="og:title" content="demo">
+    <meta property="og:description" content="demo">
+    <meta property="og:url" content="https://yuutayoshida.github.io/demo_diagnosis/result/sP9k.html">
+    <meta property="og:image" content="https://yuutayoshida.github.io/demo_diagnosis/images/ogp/sP9k.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="demo" />
+    <meta name="twitter:description" content="demo" />
+    <meta name="twitter:image" content="https://yuutayoshida.github.io/demo_diagnosis/images/ogp/sP9k.png">
+    
+    <link rel="stylesheet" href="/css/style.css?v=220714">
+</head>
+<body class="shindan" id="shindan_result">
+<header>
+    <div class="inner">
+        <div class="header_inner">
+            <div class="headerLogo-project">
+                <a href="/">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="https://placehold.jp/98x40.png" sizes="100vw">
+                        <img src="https://placehold.jp/156x64.png" alt="">
+                    </picture>
+                </a>
+            </div>
+            <div class="headerLogo-company">
+                <a href="/">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="https://placehold.jp/142x32.png" sizes="100vw">
+                        <img src="https://placehold.jp/208x48.png" alt="">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
 
-<div class="herbarium bg_<%- feeling %> js-animationLoadTarget">
+<div class="herbarium bg_carefree js-animationLoadTarget">
     <div class="bg_circleObj bg_circleObj-1 js-animationLoadTarget">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.54 178.43">
             <path fill-rule="evenodd" d="M 83.37 21 c 12 -15 22 -21 47 -21 c 25 0 51 7 58 34 c 7 27 -5 43 -7 48 c -2 5 -24 21 -27 24 c -3 3 -11 14 -12 19 c -1 5 -18 29 -30 32 c -12 3 -25 11 -46 -1 c -21 -12 -3 -30 -44 -47 c -41 -17 -19 -72 13 -70 S 71.37 36 83.37 21 Z">
@@ -75,48 +107,48 @@ const pageSettings = {
             </svg>
         </p>
         <div class="herbarium_inner js-animationLoadTarget">
-            <div class="herbariumImage_wrap <%- feeling %>">
+            <div class="herbariumImage_wrap carefree">
                 <div class="herbarium_image herbarium_image-1">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-1.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-1.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-sP9k-1.png" sizes="100vw">
+                        <img src="/images/result/herbarium/sP9k-1.png" alt="herbarium">
                     </picture>
                 </div>
                 <div class="herbarium_image herbarium_image-2">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-2.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-2.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-sP9k-2.png" sizes="100vw">
+                        <img src="/images/result/herbarium/sP9k-2.png" alt="herbarium">
                     </picture>
                 </div>
                 <div class="herbarium_image herbarium_image-3">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-3.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-3.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-sP9k-3.png" sizes="100vw">
+                        <img src="/images/result/herbarium/sP9k-3.png" alt="herbarium">
                     </picture>
                 </div>
                 <div class="herbarium_image herbarium_image-4">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-4.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-4.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-sP9k-4.png" sizes="100vw">
+                        <img src="/images/result/herbarium/sP9k-4.png" alt="herbarium">
                     </picture>
                 </div>
                 <div class="herbarium_image herbarium_image-5">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-5.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-5.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-sP9k-5.png" sizes="100vw">
+                        <img src="/images/result/herbarium/sP9k-5.png" alt="herbarium">
                     </picture>
                 </div>
             </div>
             <div class="herbarium_detail">
                 <p class="herbarium_exp">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbariumExp/sp-herbariumExp-<%- text %>.png" sizes="100vw">
-                        <img src="/images/result/herbariumExp/herbariumExp-<%- text %>.png" alt="<%- exp_alt %>">
+                        <source media="(max-width:767px)" srcset="/images/result/herbariumExp/sp-herbariumExp-K6yT.png" sizes="100vw">
+                        <img src="/images/result/herbariumExp/herbariumExp-K6yT.png" alt="フレッシュな美しさを持つあなたの肌を表すモチーフは『オレンジ』花言葉は「寛大」「美しさ」「優しさ」。おちゃめで可愛らしい一面は『ハイブリッドスターチス』に。花言葉は「変わらぬ心」。">
                     </picture>
                 </p>
                 <ul class="btn_list btn_list-kv">
                     <li class="btn_saveImage">
-                        <a href="/save-image/<%- totalResult %>.html" target="_blank" rel="noopener noreferrer">
+                        <a href="/save-image/sP9k.html" target="_blank" rel="noopener noreferrer">
                             <picture>
                                 <source media="(max-width:767px)" srcset="/images/result/sp-btn_saveImage.png" sizes="100vw">
                                 <img src="/images/result/btn_saveImage.png" alt="">
@@ -132,7 +164,7 @@ const pageSettings = {
                         </a>
                     </li>
                     <li class="btn_share btn_shareTwitter">
-                        <a href="https://twitter.com/share?url=<%- pageSettings.url %>&text=%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC" target="_blank" rel="noopener noreferrer">
+                        <a href="https://twitter.com/share?url=https://yuutayoshida.github.io/demo_diagnosis/result/sP9k.html&text=%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC" target="_blank" rel="noopener noreferrer">
                             <picture>
                                 <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareTwitter.png" sizes="100vw">
                                 <img src="/images/result/btn_shareTwitter.png" alt="">
@@ -140,7 +172,7 @@ const pageSettings = {
                         </a>
                     </li>
                     <li class="btn_share btn_shareLine">
-                        <a href="http://line.me/R/msg/text/%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC <%- pageSettings.url %>" target="_blank" rel="noopener noreferrer">
+                        <a href="http://line.me/R/msg/text/%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC https://yuutayoshida.github.io/demo_diagnosis/result/sP9k.html" target="_blank" rel="noopener noreferrer">
                             <picture>
                                 <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareLine.png" sizes="100vw">
                                 <img src="/images/result/btn_shareLine.png" alt="">
@@ -175,7 +207,7 @@ const pageSettings = {
                             <img src="/images/result/summary-condition.png" alt="あなたのお肌状態">
                         </picture>
                     </div>
-                    <p class="resultSummary_text"><%- condition %></p>
+                    <p class="resultSummary_text">おだやかな<br class='sp'>マイペースさん</p>
                 </div>
                 <div class="result_summary result_summary-strength">
                     <div class="resultSummary_image">
@@ -184,7 +216,7 @@ const pageSettings = {
                             <img src="/images/result/summary-strength.png" alt="長所">
                         </picture>
                     </div>
-                    <p class="resultSummary_text"><%- strength %></p>
+                    <p class="resultSummary_text">しなやかさに自信あり。<br>大きな肌トラブルはあまりない印象。</p>
                 </div>
                 <div class="result_summary result_summary-concern">
                     <div class="resultSummary_image">
@@ -193,7 +225,7 @@ const pageSettings = {
                             <img src="/images/result/summary-concern.png" alt="気になるお肌の気がかり">
                         </picture>
                     </div>
-                    <p class="resultSummary_text"><%- concern %></p>
+                    <p class="resultSummary_text">ときどきお肌が不安定になることや、小さく部分的なトラブルが起きることがあるかも</p>
                 </div>
             </div>
             <div class="result_advice">
@@ -203,7 +235,7 @@ const pageSettings = {
                         <img src="/images/result/summary-advice.png" alt="アドバイス">
                     </picture>
                 </div>
-                <p class="resultAdvice_text"><%- exp %></p>
+                <p class="resultAdvice_text">マイペースなあなたのお肌。<br>「お肌のバランス」がキーワード、大きなトラブルは起こりにくいけれど、うっかりエラーをおこしがち。ゆらぎやすさにお困りかも。そんなあなたは、毎日の丁寧なケアで、すみずみまでうるおう、ぷるんと弾む肌へ整えましょう。<br>また「規則正しく十分な睡眠をとること」「ビタミンB2やB6を摂取すること」「紫外線対策をしっかり行うこと」でライフスタイルから整えてみましょう。<br>まずはあなたのお肌のことを詳しく知ることから始めてみませんか？<br>最短で美しくなれる組み合わせを提案し、サンプルからお試しいただけます。</p>
             </div>
         </div>
     </div>
@@ -277,7 +309,7 @@ const pageSettings = {
             </div>
             <ul class="btn_list">
                 <li class="btn_saveImage">
-                    <a href="/save-image/<%- totalResult %>.html" target="_blank" rel="noopener noreferrer">
+                    <a href="/save-image/sP9k.html" target="_blank" rel="noopener noreferrer">
                         <picture>
                             <source media="(max-width:767px)" srcset="/images/result/sp-btn_saveImage.png" sizes="100vw">
                             <img src="/images/result/btn_saveImage.png" alt="">
@@ -293,7 +325,7 @@ const pageSettings = {
                     </a>
                 </li>
                 <li class="btn_share btn_shareTwitter">
-                    <a href="https://twitter.com/share?url=<%- pageSettings.url %>&text=%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/share?url=https://yuutayoshida.github.io/demo_diagnosis/result/sP9k.html&text=%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC" target="_blank" rel="noopener noreferrer">
                         <picture>
                             <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareTwitter.png" sizes="100vw">
                             <img src="/images/result/btn_shareTwitter.png" alt="">
@@ -301,7 +333,7 @@ const pageSettings = {
                     </a>
                 </li>
                 <li class="btn_share btn_shareLine">
-                    <a href="http://line.me/R/msg/text/%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC <%- pageSettings.url %>" target="_blank" rel="noopener noreferrer">
+                    <a href="http://line.me/R/msg/text/%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC https://yuutayoshida.github.io/demo_diagnosis/result/sP9k.html" target="_blank" rel="noopener noreferrer">
                         <picture>
                             <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareLine.png" sizes="100vw">
                             <img src="/images/result/btn_shareLine.png" alt="">
@@ -312,4 +344,14 @@ const pageSettings = {
         </div>
     </div>
 </section>
-<%- include(ejsRoot + "template/footer.ejs", {meta: pageSettings}); %>
+</main>
+<footer>
+    <div class="footer_inner">
+        <small class="footer_copyright">©demo </small>
+    </div>
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="/js/script.js"></script>
+</html>
