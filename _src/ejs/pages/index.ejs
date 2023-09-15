@@ -1,31 +1,17 @@
-<?php
-$ogp_list = ['aC43', 'Zi4j', 'T7a3', 'Fn2J','fM4x','eZ4f','e6EM','w6BG','p7Ce','i9A3','Fy4H','V9dr','p3FE','f9UV','pR5A','vE84','x5Pc','Bw4y','N3pB','sP9k','b9Xq','uT8H','pR5H','s6Fu','J7tG','w4Sd','Jw4G'];
+<%
+const ejsRoot = "../";
 
-// OGP画像 動的変更用にGETパラメータ取得
-if(isset($_GET['object'])){
-    if (in_array($_GET['object'], $ogp_list)) {
-        // tapas_listに存在するtpsが指定されている場合
-        $objName = $_GET['object'];
-        $ogp_path = "ogp_{$objName}.png";
-    } else {
-        // tapas_listに存在しないtpsが指定されている場合
-        $ogp_path = "ogp_default.png";
-    }
-} else {
-    // パラメータが指定されていない場合
-    $ogp_path = 'ogp_default.png';
+const pageSettings = {
+    pageId: "shindan_top",
+    title: "demo",
+    description: "demo",
+    url: "https://yuutayoshida.github.io/demo_diagnosis/",
+    ogpUrl: "https://placehold.jp/1200x630.png",
+    useLibrary: "true",
 }
+%>
 
-$page_id = 'shindan_top';
-$meta_title = 'demo';
-$meta_description = 'demo';
-$og_url = 'https://test/';
-$og_image = "https://test/images/ogp/{$ogp_path}";
-
-$is_useLibrary = true;
-
-include($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
-?>
+<%- include(ejsRoot + "template/header.ejs", {meta: pageSettings}); %>
     <section class="mv">
         <div class="bg_circleObj bg_circleObj-1 js-animationLoadTarget">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.54 178.43">
@@ -293,29 +279,28 @@ include($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
             </picture>
         </a>
     </div>
-<div class="beforeLoading"></div>
-<div class="intro">
-    <p class="intro_lead">
-            <span class="introLead_text introLead_text-1">
-                <picture>
-                    <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-1.png" sizes="100vw">
-                    <img src="/images/top/intro_lead-1.png" alt="さぁ始めよう">
-                </picture>
-            </span>
-        <span class="introLead_text introLead_text-2">
-                <picture>
-                    <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-2.png" sizes="100vw">
-                    <img src="/images/top/intro_lead-2.png" alt="あなただけの">
-                </picture>
-            </span>
-        <span class="introLead_text introLead_text-3">
-                <picture>
-                    <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-3.png" sizes="100vw">
-                    <img src="/images/top/intro_lead-3.png" alt="美しさを知るために">
-                </picture>
-            </span>
-    </p>
-</div>
-<?php
-include ($_SERVER['DOCUMENT_ROOT'] .'/template/footer.php');
-?>
+    <div class="beforeLoading"></div>
+    <div class="intro">
+        <p class="intro_lead">
+                <span class="introLead_text introLead_text-1">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-1.png" sizes="100vw">
+                        <img src="/images/top/intro_lead-1.png" alt="さぁ始めよう">
+                    </picture>
+                </span>
+            <span class="introLead_text introLead_text-2">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-2.png" sizes="100vw">
+                        <img src="/images/top/intro_lead-2.png" alt="あなただけの">
+                    </picture>
+                </span>
+            <span class="introLead_text introLead_text-3">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/top/sp-intro_lead-3.png" sizes="100vw">
+                        <img src="/images/top/intro_lead-3.png" alt="美しさを知るために">
+                    </picture>
+                </span>
+        </p>
+    </div>
+
+<%- include(ejsRoot + "template/footer.ejs", {meta: pageSettings}); %>

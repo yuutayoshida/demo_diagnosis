@@ -1,0 +1,32 @@
+<%
+const ejsRoot = "../../";
+
+const pageSettings = {
+    pageId: "shindan_saveImage",
+    title: "demo",
+    description: "demo",
+    url: `https://yuutayoshida.github.io/demo_diagnosis/save-image/${totalResult}.html`,
+    ogpUrl: `https://yuutayoshida.github.io/demo_diagnosis/images/ogp/${totalResult}.png`,
+    useLibrary: "false",
+}
+%>
+<%- include(ejsRoot + "template/header.ejs", {meta: pageSettings}); %>
+
+<section class="saveImage">
+    <h1 class="saveImage_msg">
+        <picture>
+            <source media="(max-width:767px)" srcset="/images/saveImage/sp-saveImage_msg.png" sizes="100vw">
+            <img src="/images/saveImage/sp-saveImage_msg.png" alt="右クリック or 長押しで保存してください。">
+        </picture>
+    </h1>
+    <div class="saveImage_inner">
+        <div class="saveImage_herbarium">
+            <img src="/images/saveImage/herbarium/<%- totalResult %>.png" alt="">
+        </div>
+        <div class="saveImage_exp">
+            <img src="/images/saveImage/exp/<%- result %>.png" alt="">
+        </div>
+    </div>
+</section>
+
+<%- include(ejsRoot + "template/footer.ejs", {meta: pageSettings}); %>

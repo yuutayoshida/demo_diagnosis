@@ -1,14 +1,49 @@
-<?php
-$page_id = 'shindan_content';
-$meta_title = 'demo';
-$meta_description = 'demo';
-$og_url = 'https://demo';
-$og_image = 'https://demo/images/ogp/ogp_default.png';
 
-$is_useLibrary = false;
 
-include($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
-?>
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <meta property="og:title" content="demo">
+    <meta property="og:description" content="demo">
+    <meta property="og:url" content="https://yuutayoshida.github.io/demo_diagnosis/content/">
+    <meta property="og:image" content="https://placehold.jp/1200x630.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="demo" />
+    <meta name="twitter:description" content="demo" />
+    <meta name="twitter:image" content="https://placehold.jp/1200x630.png">
+    
+    <link rel="stylesheet" href="/css/style.css?v=220714">
+</head>
+<body class="shindan" id="shindan_content">
+<header>
+    <div class="inner">
+        <div class="header_inner">
+            <div class="headerLogo-project">
+                <a href="/">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="https://placehold.jp/98x40.png" sizes="100vw">
+                        <img src="https://placehold.jp/156x64.png" alt="">
+                    </picture>
+                </a>
+            </div>
+            <div class="headerLogo-company">
+                <a href="/">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="https://placehold.jp/142x32.png" sizes="100vw">
+                        <img src="https://placehold.jp/208x48.png" alt="">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
     <div id="diagnose">
         <div class="bg_obj">
             <picture>
@@ -125,6 +160,14 @@ include($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
 
         </div>
     </div>
-<?php
-include ($_SERVER['DOCUMENT_ROOT'] .'/template/footer.php');
-?>
+    </main>
+<footer>
+    <div class="footer_inner">
+        <small class="footer_copyright">©demo </small>
+    </div>
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="/js/script.js"></script>
+</html>
