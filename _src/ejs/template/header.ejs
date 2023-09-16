@@ -18,14 +18,14 @@
     <% if(meta.useLibrary === 'true'){ %>
         <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <% } %>
-    <link rel="stylesheet" href="/css/style.css?v=220714">
+    <link rel="stylesheet" href="<%- rootPath %>css/style.css?v=220714">
 </head>
 <body class="shindan" id="<%= meta.pageId %>">
 <header>
     <div class="inner">
         <div class="header_inner">
             <div class="headerLogo-project">
-                <a href="/">
+                <a href="<%- rootPath %>">
                     <picture>
                         <source media="(max-width:767px)" srcset="https://placehold.jp/98x40.png" sizes="100vw">
                         <img src="https://placehold.jp/156x64.png" alt="">
@@ -33,7 +33,7 @@
                 </a>
             </div>
             <div class="headerLogo-company">
-                <a href="/">
+                <a href="<%- rootPath %>">
                     <picture>
                         <source media="(max-width:767px)" srcset="https://placehold.jp/142x32.png" sizes="100vw">
                         <img src="https://placehold.jp/208x48.png" alt="">

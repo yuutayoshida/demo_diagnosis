@@ -17,7 +17,7 @@ const browserSync = require('browser-sync');
 
 // Configurations
 let srcDir = '../_src/';
-let deployDir = '../docs/';
+let deployDir = '../dev/demo_diagnosis/';
 let isRelease = (gutil.env.type === 'release');
 const jsonData = JSON.parse(fs.readFileSync("result.json", "utf8"));
 
@@ -31,19 +31,22 @@ let config = {
 
 if (isRelease) {
     console.log('release!!');
+    deployDir = '../docs/';
 }
 
 // HTML Task
 function html() {
     let tasks = [];
+    const params = {rootPath: "/demo_diagnosis/"};
 
     // resultページ
     for (const key in jsonData) {
+        params.totalResult = key;
         const item = jsonData[key];
-        item.totalResult = key;
+        const pageSetting = { ...params, ...item}
         const routingTask = gulp
             .src([`${srcDir}ejs/pages/**/__slug.ejs`])
-            .pipe(ejs(item))
+            .pipe(ejs(pageSetting, {}))
             .pipe(rename({ basename: key, extname: ".html" }))
             .pipe(gulp.dest(deployDir));
         tasks.push(routingTask);
@@ -52,7 +55,7 @@ function html() {
     // その他ページ
     const otherPagesTask = gulp
         .src([`${srcDir}ejs/pages/**/index.ejs`])
-        .pipe(ejs())
+        .pipe(ejs(params, {}))
         .pipe(rename({ extname: ".html" }))
         .pipe(gulp.dest(deployDir));
 
@@ -85,8 +88,8 @@ function js() {
 function serve(done) {
     browserSync({
         server: {
-            baseDir: deployDir,
-            index: 'index.html'
+            baseDir: '../dev/',
+            index: '/index.html'
         },
         notify: false
     });

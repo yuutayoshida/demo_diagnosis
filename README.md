@@ -21,9 +21,11 @@ $ npm install
 │   ├── gulpfile.js
 │   └── package.json
 ├── _src                         // 編集ファイル格納ディレクトリ
+│   ├── ejs
 │   ├── js
 │   └── scss
-└── docs               // 書き出しディレクトリ
+├── dev                // ローカル検証用ディレクトリ　　　　　　　　　
+└── docs               // 公開ディレクトリ
 ```
 
 ### 2. Generate Static HTML file
@@ -31,6 +33,11 @@ $ npm install
 #### Static HTML
 ```
 $ gulp
+```
+
+#### Browser Sync
+```
+$ gulp sync
 ```
 
 #### Task Runner （for Release）

@@ -171,7 +171,7 @@ $pageName: 'shindan_top';
                 @include pseudoElement;
                 width: 100%;
                 left: 0;
-                background: url('/images/common/wave_gray.png') repeat-x;
+                background: url('/demo_diagnosis/images/common/wave_gray.png') repeat-x;
                 @include pc{
                     top: -15px;
                     height: 15px;
@@ -255,10 +255,10 @@ $pageName: 'shindan_top';
             width: 100vw;
             height: 100vh;
             @include pc{
-                background: url('/images/top/intro_bg.png') top left / cover;
+                background: url('/demo_diagnosis/images/top/intro_bg.png') top left / cover;
             }
             @include sp{
-                background: url('/images/top/sp-intro_bg.png') top left / cover;
+                background: url('/demo_diagnosis/images/top/sp-intro_bg.png') top left / cover;
             }
         }
         .intro_lead{
