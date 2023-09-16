@@ -52,8 +52,8 @@ const pageSettings = {
     </div>
     <div class="bg_obj js-animationLoadTarget">
         <picture>
-            <source media="(max-width:767px)" srcset="/images/result/sp-result_bgObj.png" sizes="100vw">
-            <img src="/images/result/result_bgObj.png" alt="">
+            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-result_bgObj.png" sizes="100vw">
+            <img src="<%- rootPath %>images/result/result_bgObj.png" alt="">
         </picture>
     </div>
     <div class="inner">
@@ -78,72 +78,72 @@ const pageSettings = {
             <div class="herbariumImage_wrap <%- feeling %>">
                 <div class="herbarium_image herbarium_image-1">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-1.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-1.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/herbarium/sp-<%- totalResult %>-1.png" sizes="100vw">
+                        <img src="<%- rootPath %>images/result/herbarium/<%- totalResult %>-1.png" alt="herbarium">
                     </picture>
                 </div>
                 <div class="herbarium_image herbarium_image-2">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-2.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-2.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/herbarium/sp-<%- totalResult %>-2.png" sizes="100vw">
+                        <img src="<%- rootPath %>images/result/herbarium/<%- totalResult %>-2.png" alt="herbarium">
                     </picture>
                 </div>
                 <div class="herbarium_image herbarium_image-3">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-3.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-3.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/herbarium/sp-<%- totalResult %>-3.png" sizes="100vw">
+                        <img src="<%- rootPath %>images/result/herbarium/<%- totalResult %>-3.png" alt="herbarium">
                     </picture>
                 </div>
                 <div class="herbarium_image herbarium_image-4">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-4.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-4.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/herbarium/sp-<%- totalResult %>-4.png" sizes="100vw">
+                        <img src="<%- rootPath %>images/result/herbarium/<%- totalResult %>-4.png" alt="herbarium">
                     </picture>
                 </div>
                 <div class="herbarium_image herbarium_image-5">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbarium/sp-<%- totalResult %>-5.png" sizes="100vw">
-                        <img src="/images/result/herbarium/<%- totalResult %>-5.png" alt="herbarium">
+                        <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/herbarium/sp-<%- totalResult %>-5.png" sizes="100vw">
+                        <img src="<%- rootPath %>images/result/herbarium/<%- totalResult %>-5.png" alt="herbarium">
                     </picture>
                 </div>
             </div>
             <div class="herbarium_detail">
                 <p class="herbarium_exp">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/herbariumExp/sp-herbariumExp-<%- text %>.png" sizes="100vw">
-                        <img src="/images/result/herbariumExp/herbariumExp-<%- text %>.png" alt="<%- exp_alt %>">
+                        <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/herbariumExp/sp-herbariumExp-<%- text %>.png" sizes="100vw">
+                        <img src="<%- rootPath %>images/result/herbariumExp/herbariumExp-<%- text %>.png" alt="<%- exp_alt %>">
                     </picture>
                 </p>
                 <ul class="btn_list btn_list-kv">
                     <li class="btn_saveImage">
-                        <a href="/save-image/<%- totalResult %>.html" target="_blank" rel="noopener noreferrer">
+                        <a href="<%- rootPath %>save-image/<%- totalResult %>.html" target="_blank" rel="noopener noreferrer">
                             <picture>
-                                <source media="(max-width:767px)" srcset="/images/result/sp-btn_saveImage.png" sizes="100vw">
-                                <img src="/images/result/btn_saveImage.png" alt="">
+                                <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-btn_saveImage.png" sizes="100vw">
+                                <img src="<%- rootPath %>images/result/btn_saveImage.png" alt="">
                             </picture>
                         </a>
                     </li>
                     <li class="btn_share btn_shareInsta">
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                             <picture>
-                                <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareInsta.png" sizes="100vw">
-                                <img src="/images/result/btn_shareInsta.png" alt="">
+                                <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-btn_shareInsta.png" sizes="100vw">
+                                <img src="<%- rootPath %>images/result/btn_shareInsta.png" alt="">
                             </picture>
                         </a>
                     </li>
                     <li class="btn_share btn_shareTwitter">
                         <a href="https://twitter.com/share?url=<%- pageSettings.url %>&text=%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC" target="_blank" rel="noopener noreferrer">
                             <picture>
-                                <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareTwitter.png" sizes="100vw">
-                                <img src="/images/result/btn_shareTwitter.png" alt="">
+                                <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-btn_shareTwitter.png" sizes="100vw">
+                                <img src="<%- rootPath %>images/result/btn_shareTwitter.png" alt="">
                             </picture>
                         </a>
                     </li>
                     <li class="btn_share btn_shareLine">
                         <a href="http://line.me/R/msg/text/%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC <%- pageSettings.url %>" target="_blank" rel="noopener noreferrer">
                             <picture>
-                                <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareLine.png" sizes="100vw">
-                                <img src="/images/result/btn_shareLine.png" alt="">
+                                <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-btn_shareLine.png" sizes="100vw">
+                                <img src="<%- rootPath %>images/result/btn_shareLine.png" alt="">
                             </picture>
                         </a>
                     </li>
@@ -161,8 +161,8 @@ const pageSettings = {
 <div class="result_detail js-animationTarget">
     <div class="bg_obj">
         <picture>
-            <source media="(max-width:767px)" srcset="/images/result/sp-resultDetail_bgObg.png" sizes="100vw">
-            <img src="/images/result/resultDetail_bgObg.png" alt="">
+            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-resultDetail_bgObg.png" sizes="100vw">
+            <img src="<%- rootPath %>images/result/resultDetail_bgObg.png" alt="">
         </picture>
     </div>
     <div class="inner">
@@ -171,8 +171,8 @@ const pageSettings = {
                 <div class="result_summary result_summary-condition">
                     <div class="resultSummary_image">
                         <picture>
-                            <source media="(max-width:767px)" srcset="/images/result/sp-summary-condition.png" sizes="100vw">
-                            <img src="/images/result/summary-condition.png" alt="あなたのお肌状態">
+                            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-summary-condition.png" sizes="100vw">
+                            <img src="<%- rootPath %>images/result/summary-condition.png" alt="あなたのお肌状態">
                         </picture>
                     </div>
                     <p class="resultSummary_text"><%- condition %></p>
@@ -180,8 +180,8 @@ const pageSettings = {
                 <div class="result_summary result_summary-strength">
                     <div class="resultSummary_image">
                         <picture>
-                            <source media="(max-width:767px)" srcset="/images/result/sp-summary-strength.png" sizes="100vw">
-                            <img src="/images/result/summary-strength.png" alt="長所">
+                            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-summary-strength.png" sizes="100vw">
+                            <img src="<%- rootPath %>images/result/summary-strength.png" alt="長所">
                         </picture>
                     </div>
                     <p class="resultSummary_text"><%- strength %></p>
@@ -189,8 +189,8 @@ const pageSettings = {
                 <div class="result_summary result_summary-concern">
                     <div class="resultSummary_image">
                         <picture>
-                            <source media="(max-width:767px)" srcset="/images/result/sp-summary-concern.png" sizes="100vw">
-                            <img src="/images/result/summary-concern.png" alt="気になるお肌の気がかり">
+                            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-summary-concern.png" sizes="100vw">
+                            <img src="<%- rootPath %>images/result/summary-concern.png" alt="気になるお肌の気がかり">
                         </picture>
                     </div>
                     <p class="resultSummary_text"><%- concern %></p>
@@ -199,8 +199,8 @@ const pageSettings = {
             <div class="result_advice">
                 <div class="resultAdvice_image">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/sp-summary-advice.png" sizes="100vw">
-                        <img src="/images/result/summary-advice.png" alt="アドバイス">
+                        <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-summary-advice.png" sizes="100vw">
+                        <img src="<%- rootPath %>images/result/summary-advice.png" alt="アドバイス">
                     </picture>
                 </div>
                 <p class="resultAdvice_text"><%- exp %></p>
@@ -247,20 +247,20 @@ const pageSettings = {
     </div>
     <div class="bg_obj">
         <picture>
-            <source media="(max-width:767px)" srcset="/images/result/sp-resultBnr_bgObj.png" sizes="100vw">
-            <img src="/images/result/resultBnr_bgObj.png" alt="">
+            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-resultBnr_bgObj.png" sizes="100vw">
+            <img src="<%- rootPath %>images/result/resultBnr_bgObj.png" alt="">
         </picture>
     </div>
     <div class="inner">
         <div class="bnrArea_inner">
             <h2 class="bnrArea_title js-animationTarget">
                 <picture>
-                    <source media="(max-width:767px)" srcset="/images/result/sp-bnrArea_title.png" sizes="100vw">
-                    <img src="/images/result/bnrArea_title.png" alt="わたしに必要な美しさ。”わたしにいい”が見つかる。">
+                    <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-bnrArea_title.png" sizes="100vw">
+                    <img src="<%- rootPath %>images/result/bnrArea_title.png" alt="わたしに必要な美しさ。”わたしにいい”が見つかる。">
                 </picture>
             </h2>
             <div class="coupon js-animationTarget">
-                <a href="/" class="coupon_inner" target="_blank" rel="noopener noreferrer">
+                <a href="<%- rootPath %>" class="coupon_inner" target="_blank" rel="noopener noreferrer">
                     <picture>
                         <source media="(max-width:767px)" srcset="https://placehold.jp/590x240.png" sizes="100vw">
                         <img src="https://placehold.jp/886x360.png" alt="">
@@ -268,43 +268,43 @@ const pageSettings = {
                 </a>
             </div>
             <div class="btn_restart js-animationTarget">
-                <a href="/content/">
+                <a href="<%- rootPath %>content/">
                     <picture>
-                        <source media="(max-width:767px)" srcset="/images/result/sp-btn_restart.png" sizes="100vw">
-                        <img src="/images/result/btn_restart.png" alt="もう一度チェック">
+                        <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-btn_restart.png" sizes="100vw">
+                        <img src="<%- rootPath %>images/result/btn_restart.png" alt="もう一度チェック">
                     </picture>
                 </a>
             </div>
             <ul class="btn_list">
                 <li class="btn_saveImage">
-                    <a href="/save-image/<%- totalResult %>.html" target="_blank" rel="noopener noreferrer">
+                    <a href="<%- rootPath %>save-image/<%- totalResult %>.html" target="_blank" rel="noopener noreferrer">
                         <picture>
-                            <source media="(max-width:767px)" srcset="/images/result/sp-btn_saveImage.png" sizes="100vw">
-                            <img src="/images/result/btn_saveImage.png" alt="">
+                            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-btn_saveImage.png" sizes="100vw">
+                            <img src="<%- rootPath %>images/result/btn_saveImage.png" alt="">
                         </picture>
                     </a>
                 </li>
                 <li class="btn_share btn_shareInsta">
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                         <picture>
-                            <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareInsta.png" sizes="100vw">
-                            <img src="/images/result/btn_shareInsta.png" alt="">
+                            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-btn_shareInsta.png" sizes="100vw">
+                            <img src="<%- rootPath %>images/result/btn_shareInsta.png" alt="">
                         </picture>
                     </a>
                 </li>
                 <li class="btn_share btn_shareTwitter">
                     <a href="https://twitter.com/share?url=<%- pageSettings.url %>&text=%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC" target="_blank" rel="noopener noreferrer">
                         <picture>
-                            <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareTwitter.png" sizes="100vw">
-                            <img src="/images/result/btn_shareTwitter.png" alt="">
+                            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-btn_shareTwitter.png" sizes="100vw">
+                            <img src="<%- rootPath %>images/result/btn_shareTwitter.png" alt="">
                         </picture>
                     </a>
                 </li>
                 <li class="btn_share btn_shareLine">
                     <a href="http://line.me/R/msg/text/%EF%BC%BC%20%E3%83%87%E3%83%A2%E6%8A%95%E7%A8%BF%EF%BC%8F%0A%0A%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%20%23%E8%82%8C%20%E3%81%AF%E3%81%93%E3%82%93%E3%81%AA%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E2%9C%A8%0A%E3%81%8A%E8%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%A7%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%F0%9F%8E%81%0A%0A%E2%96%BC%E5%8F%82%E5%8A%A0%E3%81%AF%E3%81%93%E3%81%A1%E3%82%89%E3%81%8B%E3%82%89%E2%96%BC <%- pageSettings.url %>" target="_blank" rel="noopener noreferrer">
                         <picture>
-                            <source media="(max-width:767px)" srcset="/images/result/sp-btn_shareLine.png" sizes="100vw">
-                            <img src="/images/result/btn_shareLine.png" alt="">
+                            <source media="(max-width:767px)" srcset="<%- rootPath %>images/result/sp-btn_shareLine.png" sizes="100vw">
+                            <img src="<%- rootPath %>images/result/btn_shareLine.png" alt="">
                         </picture>
                     </a>
                 </li>

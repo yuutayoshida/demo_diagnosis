@@ -183,7 +183,7 @@ $pageName: 'shindan_content';
                 @include pseudoElement;
                 width: 100%;
                 left: 0;
-                background: url('/images/common/wave_gray.png') repeat-x;
+                background: url('/demo_diagnosis/images/common/wave_gray.png') repeat-x;
                 @include pc{
                     top: -15px;
                     height: 15px;

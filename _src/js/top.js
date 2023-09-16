@@ -40,7 +40,7 @@
             setIntro();
             Cookies.set('viewed_demo', today, {
                 expires: 1,
-                path: '/',
+                path: '/demo_diagnosis/',
             });
         }
         //Cookieの秒数と現在の秒数の差が（86400秒/1日）より大きい場合：イントロアニメーションを表示
@@ -48,7 +48,7 @@
             setIntro();
             Cookies.set('viewed_demo', today, {
                 expires: 1,
-                path: '/',
+                path: '/demo_diagnosis/',
             });
         }
         //前回訪問から1日経過していない：イントロアニメーション非表示

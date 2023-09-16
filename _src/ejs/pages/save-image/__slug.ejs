@@ -15,16 +15,16 @@ const pageSettings = {
 <section class="saveImage">
     <h1 class="saveImage_msg">
         <picture>
-            <source media="(max-width:767px)" srcset="/images/saveImage/sp-saveImage_msg.png" sizes="100vw">
-            <img src="/images/saveImage/sp-saveImage_msg.png" alt="右クリック or 長押しで保存してください。">
+            <source media="(max-width:767px)" srcset="<%- rootPath %>images/saveImage/sp-saveImage_msg.png" sizes="100vw">
+            <img src="<%- rootPath %>images/saveImage/sp-saveImage_msg.png" alt="右クリック or 長押しで保存してください。">
         </picture>
     </h1>
     <div class="saveImage_inner">
         <div class="saveImage_herbarium">
-            <img src="/images/saveImage/herbarium/<%- totalResult %>.png" alt="">
+            <img src="<%- rootPath %>images/saveImage/herbarium/<%- totalResult %>.png" alt="">
         </div>
         <div class="saveImage_exp">
-            <img src="/images/saveImage/exp/<%- result %>.png" alt="">
+            <img src="<%- rootPath %>images/saveImage/exp/<%- result %>.png" alt="">
         </div>
     </div>
 </section>

@@ -127,7 +127,7 @@
         const preload = function () {
             images.forEach((img) => {
                 const $img = document.createElement('img');
-                $img.src = `/images/content/${img}`;
+                $img.src = `/demo_diagnosis/images/content/${img}`;
             })
 
             createQuestionDOM();
@@ -151,8 +151,8 @@
                         <li class="question" style="${style}" id="question-${i}-${j}">
                             <p class="question_numbering">
                                  <picture>
-                                    <source media="(max-width:767px)" srcset="/images/content/qNum/sp-qNum-${quizNum}.png" sizes="100vw">
-                                    <img src="/images/content/qNum/qNum-${quizNum}.png" alt="Q.${quizNum}">
+                                    <source media="(max-width:767px)" srcset="/demo_diagnosis/images/content/qNum/sp-qNum-${quizNum}.png" sizes="100vw">
+                                    <img src="/demo_diagnosis/images/content/qNum/qNum-${quizNum}.png" alt="Q.${quizNum}">
                                   </picture>
                             </p>`;
 
@@ -162,8 +162,8 @@
                     html += `
                         <p class="question_text">
                           <picture>
-                            <source media="(max-width:767px)" srcset="/images/content/qText/sp-${questionTitleImage}" sizes="100vw">
-                            <img src="/images/content/qText/${questionTitleImage}" alt="${questionTitle}">
+                            <source media="(max-width:767px)" srcset="/demo_diagnosis/images/content/qText/sp-${questionTitleImage}" sizes="100vw">
+                            <img src="/demo_diagnosis/images/content/qText/${questionTitleImage}" alt="${questionTitle}">
                           </picture>
                         </p>
                         <div class="choices_wrap">`;
@@ -175,8 +175,8 @@
                         html += `
                             <button type="button" class="btn btn-choice js-btn" data-action="select">
                                 <picture>
-                                    <source media="(max-width:767px)" srcset="/images/content/qBtn/sp-${questionAnswerImage}" sizes="100vw">
-                                    <img src="/images/content/qBtn/${questionAnswerImage}" alt="${questionAnswer}">
+                                    <source media="(max-width:767px)" srcset="/demo_diagnosis/images/content/qBtn/sp-${questionAnswerImage}" sizes="100vw">
+                                    <img src="/demo_diagnosis/images/content/qBtn/${questionAnswerImage}" alt="${questionAnswer}">
                                 </picture>
                             </button>`;
                     }
@@ -345,16 +345,16 @@
 
         const setImage = function (){
             if (currentGenreIndex === 0) {
-                imagePath = '/images/content/bottle/'+ mobilePrefix +'bottle-' + resultTypeList[0] + '.png';
+                imagePath = '/demo_diagnosis/images/content/bottle/'+ mobilePrefix +'bottle-' + resultTypeList[0] + '.png';
 
                 //ローディングに使うボトルの画像パス
                 const $loading_frame = $('#loading_frame');
-                const loadingBottlePath = '/images/content/'+ mobilePrefix +'loading-' + resultTypeList[0] + '.png';
+                const loadingBottlePath = '/demo_diagnosis/images/content/'+ mobilePrefix +'loading-' + resultTypeList[0] + '.png';
                 $loading_frame.attr('src',loadingBottlePath);
                 displayIntermediate();
             }
             else if(currentGenreIndex === 1) {
-                imagePath = '/images/content/flower/' + mobilePrefix + 'flower-' + resultTypeList[0] + '-' + resultTypeList[1] + '.png';
+                imagePath = '/demo_diagnosis/images/content/flower/' + mobilePrefix + 'flower-' + resultTypeList[0] + '-' + resultTypeList[1] + '.png';
                 displayIntermediate();
             }
             else if(currentGenreIndex === 2){
@@ -421,7 +421,7 @@
      * リダイレクト
      */
     function redirectResult() {
-        location.href = '/result/' + totalResultParam + '.html';
+        location.href = '/demo_diagnosis/result/' + totalResultParam + '.html';
     }
 
 })(jQuery);
